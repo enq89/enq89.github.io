@@ -1,0 +1,338 @@
+/* ----- UNIVERSAL PROPERTIES ----- */
+
+html {
+  box-sizing: border-box; /* SET BOX MODEL TO BORDER-BOX */
+  font-size: 62.5%; /* 1REM = 10PX */
+}
+
+*, *:before, *:after {
+  box-sizing: inherit; /* ALL ELEMENTS INHERIT BORDER-BOX MODEL */
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #64656a;
+  background-color: #f0f0f0;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* ----- NAVIGATION BAR ----- */
+
+#nav-bar {
+  background-color: #9bdadc;
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  z-index: 10;
+}
+
+#logo {
+  float: left;
+  margin-left: 70px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+#logo img {
+  width: 150px;
+}
+
+#nav-bar ul {
+  float: right;
+  margin-right: 70px;
+}
+
+#nav-bar li {
+  float: left;
+}
+
+#nav-bar a {
+  display: inline-block;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #f0f0f0;
+  line-height: 100px;
+  margin-left: 30px;
+  -webkit-transition: all .3s;
+          transition: all .3s;
+}
+
+#nav-bar a:hover {
+  color: #008177;
+}
+
+/* ----- HEADER ----- */
+
+header {
+  position: relative;
+  background: url(../img/hero.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+
+header p {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+header p::after {
+  content: "|";
+  margin-left: 10px;
+  font-size: 5rem;
+  color: #9bdadc;
+}
+
+/* ----- SECTION UNIVERSAL PROPERTIES ---*/
+
+#therapy, #products, #gallery, #who, #contact {
+  padding-top: 70px;
+}
+
+.section-summary {
+  text-align: center;
+  padding-bottom: 70px;
+}
+
+.section-summary h3 {
+  font-size: 3rem;
+  font-weight: 700;
+  padding-bottom: 30px;
+}
+
+.section-summary p {
+  font-size: 2rem;
+  font-weight: 300;
+  padding: 0 5% 0 5%;
+}
+
+/* ----- SECTION THERAPY ----- */
+
+.therapy-thumb-unit {
+  position: relative;
+  float: left;
+  width: 33.3333333333%;
+  padding-bottom: 35%;
+  background-color: #9bdadc;
+  overflow: hidden;
+}
+
+.therapy-thumb-unit img {
+  position: absolute;
+  width: 100%;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: all .9s;
+          transition: all .9s;
+}
+
+.therapy-thumb-unit:hover img {
+  -webkit-filter: none;
+          filter: none;
+  -webkit-transform: scale(1.075);
+      -ms-transform: scale(1.075);
+          transform: scale(1.075);
+  opacity: .75;
+}
+
+.therapy-thumb-unit figcaption::before,
+.therapy-thumb-unit figcaption::after {
+  content: "";
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  bottom: 5%;
+  left: 5%;
+  -webkit-transition: all .7s;
+          transition: all .7s;
+  -webkit-transition-delay: .2s;
+          transition-delay: .2s;
+}
+
+.therapy-thumb-unit figcaption::before {
+  border-top: 1px solid #f0f0f0;
+  border-right: 1px solid #f0f0f0;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: 100% 0;
+      -ms-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+}
+
+.therapy-thumb-unit:hover figcaption::before {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
+.therapy-thumb-unit figcaption::after {
+  border-bottom: 1px solid #f0f0f0;
+  border-left: 1px solid #f0f0f0;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: 0 100%;
+      -ms-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+}
+
+.therapy-thumb-unit:hover figcaption::after {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
+figcaption p {
+  opacity: 0;
+  position: absolute;
+  z-index: 1;
+  font-family: 'Merriweather', serif;
+  font-size: 4rem;
+  font-style: italic;
+  font-weight: 300;
+  text-decoration: none;
+  color: #f0f0f0;
+  top: 60%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+  -webkit-transition: all .6s;
+          transition: all .6s;
+  -webkit-transition-delay: .3s;
+          transition-delay: .3s;
+}
+
+.therapy-thumb-unit:hover p {
+  opacity: 1;
+  top: 50%;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* ----- FACIAL HTML ----- */
+
+.facial-header {
+  background: -webkit-linear-gradient(90deg, #f0f0f0, transparent), #f0f0f0 url(../img/hero-facial.jpg) no-repeat center;
+  background: linear-gradient(0deg, #f0f0f0, transparent), #f0f0f0 url(../img/hero-facial.jpg) no-repeat center;
+  height: 600px;
+  margin-bottom: 100px;
+}
+
+.back {
+  position: fixed;
+  bottom: 5%;
+  left: 5%;
+  background-color: #9bdadc;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-decoration: none;
+  color: #f0f0f0;
+  font-size: 5rem;
+  padding-left: 10px;
+}
+
+.therapy-container {
+  max-width: 100%;
+  height: 230px;
+  overflow: hidden;
+  background-color: #fff;
+  margin-bottom: 50px;
+  box-shadow: 0px 0px #9bdadc;
+  -webkit-transition: all .3s;
+          transition: all .3s;
+}
+
+.therapy-container:hover {
+  box-shadow: 8px 8px #9bdadc;
+}
+
+[class^=therapy-info-] {
+  width: 45%;
+  padding: 2%;
+}
+
+[class^=therapy-info-] h3 {
+  font-family: 'Merriweather', serif;
+  font-size: 2.5rem;
+  font-style: italic;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+[class^=therapy-info-] p {
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+[class^=therapy-info-] hr {
+  margin-bottom: 20px;
+}
+
+.therapy-info-box {
+  text-align: center;
+  position: relative;
+}
+
+.time p, .cost p {
+  float: left;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 10px;
+}
+
+.time b, .cost b{
+  display: block;
+}
+
+.therapy-info-left {
+  float: left;
+}
+
+.therapy-info-right h3, .therapy-info-right p {
+  text-align: right;
+}
+
+.therapy-info-right {
+  float: right;
+}
+
+.therapy-img {
+  width: 55%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.therapy-img img {
+  position: absolute;
+  opacity: .75;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}

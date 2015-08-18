@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang= "es-MX">
+  <head>
+    <meta charset= "utf-8">
+    <meta name= "author" content= "Enrique M">
+    <meta name= "description" content= "Descripcion breve de Minvielle Institute">
+    <meta name= "keywords" content= "HTML, CSS, Javascript, PHP">
+    <meta name= "viewport" content= "width=device-width, initial-scale=1">
+    
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,300,700" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Merriweather:300italic" rel="stylesheet">
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/animsition.css" rel="stylesheet">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/jquery.animsition.js"></script>
+  </head>
+  <body class="animsition">
+    <nav id="nav-bar"> <!-- START OF NAVIGATION BAR -->
+      <h1 id="logo"><img src="img/logo.svg" alt="Minvielle Institute" /></h1>
+      <ul>
+        <li><a href="#therapy">Tratamientos</a></li>
+        <li><a href="#products">Productos</a></li>
+        <li><a href="#gallery">Galería</a></li>
+        <li><a href="#who">Quienes Somos</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav> <!-- END OF NAVIGATION BAR -->
+    <header>
+      <p>Una caricia al alma</p>
+    </header>
+    <section id="therapy" class="clearfix"> <!-- START OF THERAPY SECTION -->
+      <div class="container section-summary">
+        <h3>Tratamientos</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore ipsum debitis nam, dignissimos dolorum ducimus tempora quo omnis explicabo magnam nisi? Amet natus totam, obcaecati vitae quisquam dicta. Impedit, aliquid!
+        </p>
+      </div>
+      <div class="therapy-thumb-container">
+        <figure class="therapy-thumb-unit">
+          <a href="facial.html" class="animsition-link" data-animsition-out="fade-out-up" data-animsition-out-duration="1500">
+            <img src="img/therapy/facial.jpg" />
+            <figcaption>
+              <p>Faciales</p>
+            </figcaption>
+          </a>
+        </figure>
+        <figure class="therapy-thumb-unit">
+          <a href="#">
+            <img src="img/therapy/corporal.jpg" />
+            <figcaption>
+              <p>Corporales</p>
+            </figcaption>
+          </a>
+        </figure>
+        <figure class="therapy-thumb-unit">
+          <a href="#">
+            <img src="img/therapy/depilate.jpg" />
+            <figcaption>
+              <p>Depilación</p>
+            </figcaption>
+          </a>
+        </figure>
+      </div>
+    </section> <!-- END OF THERAPY SECTION -->
+    <section id="products" class="clearfix"> <!-- START OF PRODUCTS SECTION -->
+      <div class="container section-summary">
+        <h3>Productos</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore ipsum debitis nam, dignissimos dolorum ducimus tempora quo omnis explicabo magnam nisi? Amet natus totam, obcaecati vitae quisquam dicta. Impedit, aliquid!
+        </p>
+      </div>
+    </section> <!-- END OF PRODUCT SECTION -->
+    <section id="gallery" class="clearfix"> <!-- START OF GALLERY SECTION -->
+      <div class="container section-summary">
+        <h3>Galería</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore ipsum debitis nam, dignissimos dolorum ducimus tempora quo omnis explicabo magnam nisi? Amet natus totam, obcaecati vitae quisquam dicta. Impedit, aliquid!
+        </p>
+      </div>
+    </section> <!-- END OF GALLERY SECTION -->
+
+<script>
+$(document).ready(function() {
+  
+  $(".animsition").animsition({
+  
+    inClass               :   'fade-in',
+    outClass              :   'fade-out',
+    inDuration            :    1500,
+    outDuration           :    800,
+    linkElement           :   '.animsition-link',
+    // e.g. linkElement   :   'a:not([target="_blank"]):not([href^=#])'
+    loading               :    true,
+    loadingParentElement  :   'body', //animsition wrapper element
+    loadingClass          :   'animsition-loading',
+    unSupportCss          : [ 'animation-duration',
+                              '-webkit-animation-duration',
+                              '-o-animation-duration'
+                            ],
+    //"unSupportCss" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+    //The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+    
+    overlay               :   false,
+    
+    overlayClass          :   'animsition-overlay-slide',
+    overlayParentElement  :   'body'
+  });
+});
+</script>
+  </body>
+</html>
