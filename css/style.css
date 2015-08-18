@@ -136,6 +136,9 @@ header p::after {
   width: 100%;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
+  -webkit-transform: scale(1.005);
+      -ms-transform: scale(1.005);
+          transform: scale(1.005);
   -webkit-transition: all .9s;
           transition: all .9s;
 }
